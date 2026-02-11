@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Event Wristband System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎟 Smart Event Wristband System</h1>
+
+<div class="nav">
+  <button onclick="showSection('student')">Student</button>
+  <button onclick="showSection('vendor')">Vendor</button>
+  <button onclick="showSection('admin')">Admin</button>
+</div>
+
+<!-- STUDENT -->
+<div id="student" class="section">
+  <h2>Student Registration</h2>
+  <input type="text" id="studentName" placeholder="Enter Name">
+  <button onclick="registerStudent()">Register & Generate Wristband</button>
+
+  <div id="wristband"></div>
+</div>
+
+<!-- VENDOR -->
+<div id="vendor" class="section hidden">
+  <h2>Food Redemption Panel</h2>
+  <input type="text" id="scanInput" placeholder="Enter QR Code ID">
+  <button onclick="redeemFood()">Redeem Food</button>
+  <p id="redeemStatus"></p>
+</div>
+
+<!-- ADMIN -->
+<div id="admin" class="section hidden">
+  <h2>Admin Dashboard</h2>
+  <p>Total Students: <span id="totalStudents"></span></p>
+  <p>Food Redeemed: <span id="redeemedCount"></span></p>
+  <p>Food Remaining: <span id="foodRemaining"></span></p>
+  <p>Footfall: <span id="footfall"></span></p>
+  <p>Seats Available: <span id="seatsAvailable"></span></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
