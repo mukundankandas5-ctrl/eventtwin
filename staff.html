@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SmartWrist™ Staff Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Food Counter Portal</h1>
+<p class="subtitle">Scan & Validate</p>
+
+<div class="card">
+
+  <div id="reader" style="width:300px;margin:auto;"></div>
+
+  <div id="scanStatus" class="status-box">
+    Ready to Scan
+  </div>
+
+  <p>Total Redeemed: <span id="redeemCount">0</span></p>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+  initStaffScanner();
+</script>
+
+</body>
+</html>
